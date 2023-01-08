@@ -1,5 +1,5 @@
 #popular {
-  padding: 30px 0;
+  padding: 120px 0;
   .popular {
     display: flex;
     justify-content: space-between;
@@ -9,6 +9,29 @@
       width: 15vw;
       padding: 10px 15px;
       border: 2px solid gray;
+
+      .stars {
+        position: relative;
+
+        .stars-color {
+          height: 100%;
+          z-index: 1;
+          position: absolute;
+        }
+        .star {
+          position: relative;
+          z-index: 3;
+        }
+      }
     }
   }
+}
+
+.cast {
+  padding: 50px 0;
+  margin: 50px 0;
+}
+
+.videos {
+  padding: 0 0 40px 0;
 }

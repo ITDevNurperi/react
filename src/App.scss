@@ -1,7 +1,11 @@
+@import "styles/movie";
+@import "styles/detailPage";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -11,23 +15,45 @@
 
 #header {
   background: #070707;
-  padding: 20px 0;
-}
+  padding: 20px 100px;
+  //position: fixed;
+  //z-index: 99;
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--search {
+      input,button{
+        color: #070707;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+      button {
+        background: white;
+        margin-left: 10px;
+        cursor: pointer;
+        &:hover {
+          background: #40AB7E;
+          color:white;
+          transition: .2s;
+        }
+      }
+    }
 
-.right-side {
-  display: flex;
-  align-items: center;
+    .right-side {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 a {
   margin: 0 20px;
-  color: cadetblue;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
 }
@@ -38,7 +64,7 @@ a {
 }
 
 .btn {
-  color:#40AB7E ;
+  color: #40AB7E;
   background: transparent;
   border: 1px solid #40AB7E;
   border-radius: 20px;
@@ -65,4 +91,32 @@ a {
 .icon {
   color: red;
   font-size: 13rem;
+}
+
+.dark-mode {
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 13px;
+  padding: 7px 16px;
+  margin: 0 20px;
+  font-size: 15px;
+}
+
+.recipes {
+  padding: 0 20px;
+}
+
+.popular-pagination {
+  text-align: center;
+  padding: 5% 0;
+   button {
+     background: #40AB7E;
+     color: white;
+     padding: 10px;
+     border: none;
+     border-radius: 5px;
+     outline: none;
+     margin: 0 5px;
+   }
 }
